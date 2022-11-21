@@ -2115,8 +2115,9 @@ figure.highlight pre .javascript .function {
 }
 .article-sort-item-img {
   overflow: hidden;
-  width: 80px;
+  width: 120px;
   height: 80px;
+  border-radius: 8px;
 }
 .article-sort-item-info {
   -webkit-box-flex: 1;
@@ -2398,7 +2399,7 @@ figure.highlight pre .javascript .function {
   -webkit-align-items: center;
   align-items: center;
   overflow: hidden;
-  height: 18em;
+  height: 15em;
 }
 @media screen and (max-width: 768px) {
   #recent-posts > .recent-post-item {
@@ -2424,7 +2425,7 @@ figure.highlight pre .javascript .function {
 }
 #recent-posts > .recent-post-item .post_cover {
   overflow: hidden;
-  width: 44%;
+  width: 40%;
   height: 100%;
 }
 @media screen and (max-width: 768px) {
@@ -2619,6 +2620,7 @@ h1.page-title + .tag-cloud-list {
 #aside-content .card-info #card-info-btn {
   display: block;
   margin-top: 14px;
+  border-radius: 16px;
   background-color: var(--btn-bg);
   color: var(--btn-color);
   text-align: center;
@@ -2687,8 +2689,9 @@ h1.page-title + .tag-cloud-list {
 }
 #aside-content .aside-list > .aside-list-item .thumbnail {
   overflow: hidden;
-  width: 4.2em;
-  height: 4.2em;
+  width: 4.8em;
+  height: 3.6em;
+  border-radius: 6px;
 }
 #aside-content .aside-list > .aside-list-item .content {
   -webkit-box-flex: 1;
@@ -2751,6 +2754,7 @@ h1.page-title + .tag-cloud-list {
   -o-transition: all 0.4s;
   -ms-transition: all 0.4s;
   transition: all 0.4s;
+  border-radius: 16px;
 }
 #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a:hover,
 #aside-content .card-categories ul.card-category-list > .card-category-list-item a:hover {
@@ -3439,14 +3443,14 @@ h1.page-title + .tag-cloud-list {
   }
 }
 #page-header.not-top-img {
-  margin-bottom: 10px;
-  height: 60px;
+  margin-bottom: 0px;
+  height: 54px;
   background: 0;
 }
 #page-header.not-top-img #nav {
   background: rgba(255,255,255,0.8);
-  -webkit-box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
-  box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
+  -webkit-box-shadow: 0 2px 3px -2px rgba(175,175,175,0.6);
+  box-shadow: 0 2px 3px -2px rgba(175,175,175,0.6);
 }
 #page-header.not-top-img #nav a {
   color: var(--font-color);
@@ -3456,14 +3460,15 @@ h1.page-title + .tag-cloud-list {
   position: fixed;
   top: -60px;
   z-index: 91;
-  background: rgba(255,255,255,0.8);
-  -webkit-box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
-  box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
+  background: rgba(255,255,255,0.85);
+  -webkit-box-shadow: 0 4px 5px -4px rgba(133,133,133,0.6);
+  box-shadow: 0 4px 5px -4px rgba(133,133,133,0.6);
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   -moz-transition: -moz-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   -o-transition: -o-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   -ms-transition: -ms-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  backdrop-filter: saturate(180%) blur(20px);
 }
 #page-header.nav-fixed #nav a,
 #page-header.nav-fixed #nav #site-name,
@@ -3587,8 +3592,8 @@ h1.page-title + .tag-cloud-list {
   align-items: center;
   padding: 0 36px;
   width: 100%;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 12%;
+  padding-right: 12%;
   height: 60px;
   font-size: 1.3em;
   opacity: 0;
@@ -3730,7 +3735,7 @@ h1.page-title + .tag-cloud-list {
   position: relative;
   padding-bottom: 6px;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-  font-size: 0.78em;
+  font-size: 0.82em;
   cursor: pointer;
 }
 #nav .site-page:not(.child):after {
@@ -5337,8 +5342,8 @@ blockquote.pullquote.right {
 [data-theme='dark'] #page-header.nav-fixed > #nav,
 [data-theme='dark'] #page-header.not-top-img > #nav {
   background: rgba(18,18,18,0.8);
-  -webkit-box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
-  box-shadow: 0 5px 6px -5px rgba(133,133,133,0);
+  -webkit-box-shadow: 0 2px 3px -2px rgba(175,175,175,0);
+  box-shadow: 0 2px 3px -2px rgba(175,175,175,0);
 }
 [data-theme='dark'] #post-comment #comment-switch {
   background: #2c2c2c !important;
