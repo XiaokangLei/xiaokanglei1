@@ -1831,6 +1831,41 @@ figure.highlight pre .javascript .function {
 #article-container figure.highlight .highlight-tools .code-lang {
   left: 75px;
 }
+#article-container .code-expand-btn {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  background: var(--hlexpand-bg);
+  text-align: center;
+  font-size: var(--global-font-size);
+  cursor: pointer;
+}
+#article-container .code-expand-btn i {
+  padding: 6px 0;
+  color: var(--hlnumber-color);
+  -webkit-animation: code-expand-key 1.2s infinite;
+  -moz-animation: code-expand-key 1.2s infinite;
+  -o-animation: code-expand-key 1.2s infinite;
+  -ms-animation: code-expand-key 1.2s infinite;
+  animation: code-expand-key 1.2s infinite;
+}
+#article-container .code-expand-btn.expand-done > i {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#article-container .code-expand-btn.expand-done + table,
+#article-container .code-expand-btn.expand-done + pre {
+  margin-bottom: 1.8em;
+}
+#article-container .code-expand-btn:not(.expand-done) ~ table,
+#article-container .code-expand-btn:not(.expand-done) ~ pre {
+  overflow: hidden;
+  height: 480px;
+}
 @-moz-keyframes code-expand-key {
   0% {
     opacity: 0.6;
@@ -2138,7 +2173,26 @@ figure.highlight pre .javascript .function {
   }
 }
 .category-lists .category-list {
-  margin-bottom: 0;
+  margin-bottom: 6px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  overflow: hidden;
 }
 .category-lists .category-list a {
   color: var(--font-color);
@@ -2164,7 +2218,7 @@ figure.highlight pre .javascript .function {
 }
 .category-lists ul li {
   position: relative;
-  margin: 6px 0;
+  margin: 6px 6px;
   padding: 0.12em 0.4em 0.12em 1.4em;
 }
 #body-wrap {
@@ -2198,7 +2252,7 @@ figure.highlight pre .javascript .function {
   flex: 1 auto;
   margin: 0 auto;
   padding: 40px 15px;
-  max-width: 1200px;
+  max-width: 1240px;
   width: 100%;
 }
 @media screen and (max-width: 900px) {
@@ -2233,7 +2287,7 @@ figure.highlight pre .javascript .function {
   }
 }
 .layout > div:first-child {
-  width: 74%;
+  width: 78%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -2340,7 +2394,7 @@ figure.highlight pre .javascript .function {
   margin: 15px 10px;
   width: 60px;
   height: 60px;
-  border-radius: 35px;
+  border-radius: 8px;
   -webkit-transition: width 0.3s ease-out;
   -moz-transition: width 0.3s ease-out;
   -o-transition: width 0.3s ease-out;
@@ -2425,8 +2479,10 @@ figure.highlight pre .javascript .function {
 }
 #recent-posts > .recent-post-item .post_cover {
   overflow: hidden;
-  width: 40%;
-  height: 100%;
+  width: 32%;
+  height: 80%;
+  border-radius: 8px;
+  margin-left: 2%;
 }
 @media screen and (max-width: 768px) {
   #recent-posts > .recent-post-item .post_cover {
@@ -2454,7 +2510,7 @@ figure.highlight pre .javascript .function {
 }
 #recent-posts > .recent-post-item >.recent-post-info {
   padding: 0 40px;
-  width: 57%;
+  width: 68%;
 }
 @media screen and (max-width: 768px) {
   #recent-posts > .recent-post-item >.recent-post-info {
@@ -3813,6 +3869,7 @@ h1.page-title + .tag-cloud-list {
   overflow: hidden;
   margin-top: 40px;
   width: 100%;
+  border-radius: 8px;
   background: #000;
 }
 .layout > .recent-posts .pagination > * {
@@ -4012,9 +4069,10 @@ h1.page-title + .tag-cloud-list {
   overflow: hidden;
   margin: 3px;
   width: calc(33.333% - 6px);
-  height: 200px;
+  height: 160px;
   background: #000;
   vertical-align: bottom;
+  border-radius: 8px;
 }
 @media screen and (max-width: 768px) {
   .relatedPosts > .relatedPosts-list > div {
